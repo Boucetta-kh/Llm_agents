@@ -1,0 +1,314 @@
+BE: 3) Create Your Task Manager App  : Start by creating a simple webpage using HTML and CSS. This will be our React component for the task manager which we'll build in later steps of this tutorial series (Node & Express). In `TaskManagerApp` directory, create your index file called 'index.html':  
+```touch TaskManagerClient/src/components/.css  && nano -w TASKMANAGERCLIENT_FILENAME="client-app.jsx", taskmanagerclient/, mkdir client db models routes public src tasks package json README .gitignore start script, yarn init --yes node scripts etc., and create your entry file in `TaskManagerApp` directory called 'index.html' with the following content:
+```javascript  return (<div> Hello from Task Manager App </div>  ) ; } export default App; ''   This is a simple component that renders "Hello, world!" to HTML using React components and JSX syntax in JavaScript files created by create-react app. Now we're ready for our Node & Express set up next step! Let me know how I can assist you further, Happy coding with your project!!
+```  And now run the setup script again: ``npx create-react-app taskManagerClient`` and also install necessary dependencies using npm such as express or any other dependency. Move on to our server side code in `TaskmanagerServer` directory (if already created). In this part of your project, you'll set up Express routes for getting all tasks data from the database via POST request; adding a new task through PUT request and deleting an existing one by DELETE method:
+```javascript const express = require('express'); 
+const cors=require("cors");   app.use(bodyParser()); // parses incoming requests in-between middlewares (like bodyparser)    let port =  process.env.PORT || 3012; /* This is the default if no environment variable named PORT has been set */
+app .listen(port, function() { console .log('listening on' + '  http://localhost:'+ port); }); // listen to requests from clients using express server   const dbURI = "mongodb database URI"; mongoose.connect (dbURI ,{useNewUrlParser: true}) /* connect method takes two parameters, connection string and callback function */ .then ((db) => console.log ('Successfully connected'))
+```  Make sure you have a MongDB running in your local machine as the database for storing tasks data is required by this application; create models/tasks to match with DB schema (like mongoose model). The server code should be listening on http://localhost:3012 and handle requests based upon routes mentioned. Now you're ready, let me know how I can assist your next step!
+
+
+BE: Surely
+
+BE:
+This outline provides an overview of how the frontend (AngularJS in this case), server, as well as client can be setup using Express & Mongodb together with Angualar JS for routing and handling HTTP requests respectively; a part where you'll need to set up your middleware like body-parser. 
+For setting sessions across different browser tabs or devices (which express session is used), install the package, create an object defining options in that file as well as applySession method on server startup. For user registration and login functionality with Expressjs & MongoDB you'll also need to use middleware like body-parser for handling HTTP POST requests at backend using AngularJS while setting up a route handler function (similar how it was done), handle routes in the frontend by making http request from your angular application, then set session user data. 
+It is recommended that you have an understanding of NodeJs & Expressjs before proceeding with this setup as they are powerful tools to build scalable and robust backend applications without needing a complex database solution like MongoDB or similar ORM libraries for handling DB operations in AngularJS, which has been omitted here. Also remember the cors package is needed if you want your application's API endpoints accept requests from different origins (Cross-Origin Resource Sharing). 
+The setup process should be completed and running correctly when http://localhost:${port} endpoint gets hit in a browser or through tools like Postman. You can log statements for checking the connection to DB, starting server with app listening at specified port etc., which have been omitted here but could help you understand how these things work behind-the scenes during your setup process.
+
+
+BE:
+Apologies, but it seems there was a misunderstanding. As you have described your project setup (using Reacjs with node js & mongo db), I will explain how to structure each part of the application step by-step in more detail below for clarity and convenience when implementing these concepts on top. 
+
+Step1 - Setting Up Project Environment: This is done using npm(node package manager). First, install 'create react app' globally via `npm i create-react-app` (without '-g') then use it to start a new project by running the command in your terminal where you want these application files located and run from there or directly within that folder.
+Then Install NodeJS & NPM also setup MongoDB Atlas following instructions provided on their official site [here](https://www.mongodb.com/try/download/database?jumpgate=%23quickstarts).  Also, install Express via npm (either globally using `npm i -g` if required) and set up a new project in your preferred directory:
+   ```bash
+   mkdir mern-app && cd mern-app; git init; yarn init -y;
+   touch server.js index.js actions.js components/NavBar.js components/Footer.js App.js ../db connectionString.env .gitignore
+   ```       Then, initialize your project: `npm i express dotenv mongoose` for database setup and other dependencies from above steps or use a tool like nodemon if you are not satisfied about the refresh of browser after every change in code base (install it via command - npm install --save-dev nodemon).
+   ```bash  touch .gitignore; echo "*.*" > .gitignore  `` `yarn add axios react-loader-spinner` for client side dependencies. For server setup, use: 'mongodb+srv://<username>:<password>@cluster0-xyzqf.gcp.mongodb.net/test?retryWrites=true&w=majority' (replace <usename and password with your actual MongoDB username & Password)
+   ```   Then create server setup file `server.js`, initialize express app:  `const express = require('express'); const app  = express();  let port = 80; ... rest of the code for setting up Express in a way that it listens to requests on given PORT number (you can set this variable at top), and then setup mongoDB connection using Mongoose.
+   ```bash   npm run build --> For production purpose, use 'npm i -D nodemon' install as per above command for running server in debug mode via `nodemon` instead of traditional node execution (you can still start it with:  `npx nodemon index.js 80;
+   ```      Then you will have setup your project and all dependencies, to run the app use 'node ./server/index' or if using browser-based methods check for tool like Fiddler which is a good choice in production environment according best practices guide provided on MERN stack setups. (MongoDB Express React Node).
+   ```bash   npm test --> Run Jest testing suite – you can use it as needed or if not using the above setup, create your own jests and import them to this project with appropriate code for setting up tests in a way that suits each part of application. The actual implementation depends on how exactly are these parts working under MERN stack setups mentioned at top).
+   ```bash   Finally validate all inputs received from client side using tools like Fiddler or similar online debugging tool and fix any issues as they arise according best practices guide provided here (MongoDB Express React Node setup ).  This step would be very important in production environment. After setting up your project, you should always ensure to run it with `npm start` command instead of just running the file using nodemon or browser-based methods which are not recommended for live environments as they can cause unexpected behavior and crashes if there's any change made on client side code after server has started receiving request.
+
+
+BE:
+It seems like there was a mix-up in the instruction given. Here's an updated version that should cover all aspects related Python and Django development including tests deployment setup handling forms error processing security, environment setting up handing form data validation etc., as well as more information regarding scaling (Docker/Kubernetes) when deployments are required:
+
+1- Introduction to Project Setup – Include basic settings for your project. This should include the installation of necessary libraries and modules like pipenv or virtual environment, database setup with an ORM library such as SQLAlchemy if you're using a Python framework (like Django), setting up URL routes in urls file(s) etc.:
+```python 
+# Example settings.py for django project:
+INSTALLED_APPS = [
+    ...,   # include your apps here... excluding migrations & admin interface app by default because it'll be included with Django as well (apps are added in manage.py) and can cause confusion or errors if not handled properly.. 
+     'django.contrib.auth',
+        .... ,# add all the required packages ...   
+]   # end INSTALLED_APPS section... include them here according to your project requirements then you should use `python manage.py makemigrations` and  `python manage.py migrate` for database setup if needed..  Then run server using: python manage.py runserver .
+```   # End of INSTALLED_APPS section... include them here according to your project requirements then you should use `pipenv install Django Pipfile ... pip dependencies and create a settings file with all the required apps, database configurations etc..  This is used in manage.py as well for various tasks such running servers or shell (command-line interface)
+```python   # End of INSTALLED_APPS section... include them here according to your project requirements then you should use `pipenv install Django Pipfile ... pip dependencies and create a settings file with all the required apps, database configurations etc..  This is used in manage.py as well for various tasks such running servers or shell (command-line interface)
+```python    # End of INSTALLED
+
+
+BE:
+In general terms with regard to file handling in databases like SQL Server (which handles binary Large OBjects), you're correct that large scale data management can be complicated due to issues such as performance, storage and locking contention for concurrent writes or reads accesses. However the advantages of each approach are:
+1) LOAD_FILE(): This method is straightforward in handling files from a file system on your server (like local filesystem). It's simple enough that you can use this to store large images directly into SQL Server without needing an additional step like image resizing or conversion. However, if the uploaded content isn’t static and it varies based upon time/day etc., then loading in as BLOB will not be feasible since a row cannot have two different values for each column (data type).
+2) `FILENAME`(): This function retrieves file names of files stored at specific locations on your server. It gives you the name, and it's much easier to use this method if there are multiple places where images need to be loaded from due its simplicity in getting only one location rather than a set list for each image load operation 
+3) `STREAM_READ`(): This function allows reading of files stored at your server. It is useful when you want read large file chunks (e.g., multipart uploads), or if the data doesn't fit into memory then just to a very small portion from disk for later use, since SQL Server can only hold in-memory information and not entire content of files until they are all loaded at once by `STREAM_READ` method (this is similar as streaming large file).
+4) BULK INSERT: This approach allows you upload data to the server directly from a CSV or TXT file, which can be much faster than loading each row individually. Also it supports bulk inserts of more rows in one go without any locking/wait mechanism and provides ability for concurrent writes (in case there are multiple users accessing your database at once).
+5) Direct COPY: This function allows you to copy data from a CSV file or SQL Server table directly into another location on the server. It's usually faster than full-table loads as it operates in chunks, and can load much larger amounts of rows using only disk I/O rather then memory for storing intermediate results (this is more efficient).
+6) FileStream: This function uses a file stream to read data from multiple files at once. It's very useful when you want the full content as per requirement but it could be slow due high CPU usage in case of large size datasets, because SQL Server needs additional time for processing all operations and returns only one result set (this is more efficient).
+In conclusion: Depending on your specific use cases or requirements there are many ways to handle file data. Choose the method that best suits you as it will depend upon factors like speed/performance requirement of operation(s), storage constraints, how much CPU resources they require etc., not all methods have pros and cons in terms of both readability & simplicity (in some case) or performance impact if implemented correctly within your application design.
+
+
+Sure, I will provide a brief overview of each feature and how they should be implemented using Python (FastAPI). 
+Please note that this is only the front end part but both parts are quite important to have in your project development as you mentioned later on backend roles with their respective tasks.  
+1) User Registration: This can simply involve accepting a POST request containing user details such as username, password and email from users while saving these data into some form of database or directly using ORM like SQLAlchemy for Python's Object Relational Mapping (ORM). 
+For the frontend part you may want to use technologies that allow HTTP requests easily. This could be done by making AJAX calls when a user performs an action such as clicking 'Register'. You can also implement email verification in this process if required, etc..  
+2) User Login: Similar functionality should exist here but with the difference of accepting POST request containing username and password from users then return authentication token/session to login. This would require using JWT (JSON Web Tokens). 
+3) Create Task : When a user creates new task they will typically do this by submitting data through an AJAX call or use form on frontend, parse these details in the POST request and create entry into database/ORM with them. For handling users authentication you may need to implement JWT for token based system..
+4) Edit Task : Similar functionality as described above but we are editing existing task instead of creating new ones using id from url parameters or hidden input fields (if any). 
+5) Delete Tasks: This feature can be implemented through a process similar like update where you will find out the user to delete tasks and then perform deletion. The request should contain this information in JWT based system for authorized users only..  
+6) Task List View : Upon fetching task list from database/ORM, we get all data of that specific logged-in User who performed GET Request on Frontend side through token (JWT).  This would require validating the user's session in front end and getting details using backend. You can also implement pagination if required..
+    - In this case you need to handle JWT verification for every request from client-side as these requests are coming from different domains/origins than your server (for security reasons), unless they come directly with CORS enabled on the frontend side of task manager app.  If all tokens should be verified at once, then it's better to use middleware in NodeJs and pass that request object next along as a parameter which can call function for parsing user token or return error if invalid/missing..
+
+
+Understood! In this case you should consider the following main parts and components involved with your project setup : 
+- BackEnd (Server Side) using FastAPI, SQLAlchemy ORM to handle database operations like User Registration & Login. You can use JWT for token based authentication if needed in production environment. Here's a simple breakdown:
+    - Models `User` and `Task` should be defined with appropriate fields (like id(auto increment), name, email etc.) using SQLAlchemy ORM models or Pydantic model from FastAPI as per your requirements for database operations like create new User/Tasks.  You will have routes in this part to handle user registration & login and also CRUD operation on tasks respectively with corresponding HTTP methods (POST , GET ...).
+    - Database Connection: The connection between the backend server, client app(s), or both should be managed using SQLAlchemy engine provided by `create_engine` function from sqlalchemy.orm library in FastAPI which return a session to perform database operations i.e., CRUD Operations on models defined previously (i.e user and tasks).
+    - JWT Authentication: If you require token based authentication, then create routes at backend for handling login request(with `POST` method) along with generating tokens using libraries like PyJwt or similar in FastAPI to verify authenticated users when required operations are performed (like creating task/editing a Task).
+- FrontEnd user interface: The client app should consume these APIs and display the data retrieved from server. You can use ReactJS, Angular for frontend part with their respective libraries like Axios or Fetch API to make requests on backend side while displaying tasks in list view (assuming each task has a unique id).
+    - Receive JSON Web Token(JWT) as the cookie and send it across all subsequent HTTP request made from client app. You can use `axios` with interceptors like middleware for this purpose to ensure JWT token is sent in every API requests while logged-in user only, unless they come directly through CORS enabled domain or source origin(production environment).
+    - On the frontend side (ReactJS), you can use libraries such as axios and redux toolkit for state management. Redux will have actions like `USER_LOGIN` which dispatch JWT token to server on successful login, then this action should be handled in your store where we'll manage all the states of our application with respect user logged-in status(if already logedIn or not).
+    - Use asynchronous functions for HTTP requests (like `axios.post`) and use middleware like jsonwebtoken to add JWT token when a request is made from client app while backend makes sure only authorized users can access these operations i.e., user must be logged in才能 perform create/edit task operation etc..
+    - Use libraries such as `react-router` for routing and redirecting according to the states of your application (i.e, if a request is made without logging In then it should navigate User Registration or Login).  If users are authenticated but they try an unauthorized route operation e.g., create/edit task from list view directly due not being logged in so navigation must be done accordingly i.e to '/login' page where user has the option of logging-in via a token provided by backend or new account creation process will open which requires email and password inputs for creating an Account..
+    - Use ReactJS hooks such as `useState`, 'dispatch': along with Redux toolkit library (actions & reducers) to manage application state in the frontend.  This way you can keep your UI/UX DRY(don't repeat yourself). You will have components for list view and task creation form where all CRUD operations are handled as per requirement, displaying data received from server at respective screens with ReactJS hooks..
+
+
+Surely! Here's how you can structure your project management tasks using markdown tables with various formats and enhancements like links to GitHub Issues or Project Wiki pages, status labels (like "To Do", In Progress"), assignees for each task etc.: 
+  
+```markdown
+| [Task ID](https://github.com/OWNERNAME/REPOSITORY/issues) | Description                                                                                                                          | Assigned To    | Status     | Priority   | Labels             |  Comments  | Links        | Timeline         | Dependencies                 |  Remediation Time   |  Owner            |  
+|----------|-------------------------------------------------------------------------------------------------------------------------------------|---------------|-------------|-----------|------------------|---------|--------|-------------- | ----------------- |------------------------------------|------------------------------------------------------|  2nd Developers, FrontEnd Team mems.     | Completed   | To Do         | Priority: High     | 🔄 [Issue](https://github.com/OWNERNAME/REPOSITORY/issues)| 4 days      |  Backend Dev  |
+``` 
+This table provides a more comprehensive view of tasks, assignees and dependencies which can be very helpful for tracking progress as well to maintain the team's focus during various stages in development process such as planning (To Do), working on it(In Progress), testing done until completion(), completed etc. It also includes status labels like 'Completed', ‘Pending Review’, depending upon requirement and work is being carried out against that label for respective users/teams to know the progress of tasks at any given stage in time frame defined by timeline (e.g., milestones).
+
+
+Sure, here's a simple table structure following the guidelines provided above. Note that this is just an example; actual implementation will depend on specific project needs or requirements of your team environment as well to avoid confusion (like using different tools for tracking issues). 
+```markdown
+| Task ID | Description                                                                                                                          |  Assigned To   |  Status     |  Priority  | Labels             |   Comments  |  Links        |  Timeline         |  Dependencies                   |  Remediation Time   | Owner            |  Team               |  Complex程度      | Estimated hours    |  Actual Hours      
+|---------|-------------------------------------------------------------------------------------------------------- |-----------------|-------------|------------|------------------|-------------- —  |----------:|   -------   -->    ---     `----.-----,------- -------+----------- +==================   |=============     |===       ======       | Completed    | To Do           |  High          |🔄 Issue #1      |4 days         | Backend Dev        
+```    
+This table provides a complete and comprehensive view of tasks including details like assigned to user(s), their status, priority level (High/Medium/Low depending on the complexity required for completion) as well labels. The comments field allows you provide additional information or further explanation about each task at hand; Links could be specific project management tools such links related with that particular issue number and Timeline is defined in terms of timeframes like days, weeks etc., which will help track progress over the timelines set for those tasks (Dependencies on other issues/tasks this one depends upon). 
+The Owner field indicates who owns each task. The complex level can be mentioned as well to indicate how complicated that issue is if necessary; and Estimated hours could show you an estimate of time required by team in hour or day for completing the work done so far (Actual Hours) might help with overall understanding progress over timelines set up previously, while Completed would mark when task has been completed.
+
+
+BE: Can you give more technical details about the backend responsibilities you listed?
+
+Sure, I can provide some basic information on how each of these back-end features might be implemented in a task manager app using FastAPI and SQLAlchemy ORM for database interaction as follows : 
+
+1. **User Registration & Login** - This could involve user models with fields such as email/username, hashed password (for security reasons), etc., then use JWT tokens or sessions to maintain the logged-in state of users and authenticate them on every request using a middleware like Auth0 in production.
+   ```python
+   from fastapi import FastAPI, Depends, HTTPException, status 
+   from fastapi.security import OAuth2PasswordBearer, OAuth2PasswordRequestForm
+   from sqlalchemy.orm import Session
+   from database.session import get_db # Assumes you have a session configured with SQLAlchemy ORM in your FastAPI app using dependency injection 
+   ```
+      
+2. **Task Creation** - This could involve task models and endpoints to create new tasks, where the backend is responsible for validating input data before creating it into database (like checking if title or description are not empty). The frontend should then be able form this endpoint with POST requests that contain JSON-serializable body containing all necessary information about a newly created Task.
+   ```python
+   from pydantic import BaseModel  # FastAPI will automatically parse request/response bodies as Pydantices, and serialize them to HTTP responses in various formats (like json) via ORM Models with SQLAlchemy models for example.    
+      
+3. **Editing of Existing Task** - Similar logic can be applied here: you should have endpoints like POST /tasks/{task_id} which accept a PUT request, and allow updating fields in the task model using ORM Models provided by SQLAlchemy that match your tasks' schema (like allowing only title/description updates).
+   ```python
+   from fastapi import FastAPI  # Assumes you have an application instance of type 'FastAPI'. This is a way to make requests into this app. It also provides the ability for us all in one team / company - sharing knowledge, tools and projects together using APIs (like our ORM models/schemas).
+      ```  
+       
+4. **Deletion** – You'll likely need another endpoint that deletes a task given its ID with PUT or DELETE HTTP methods which can be done in your FastAPI application, just like the above-mentioned editing endpoints where you could mark tasks as deleted (by updating them). SQLAlchemy has ORM features to easily handle this.
+   ```python 
+   from fastapi import APIRouter # Assumes that we are using a router for our app if not then use FastAPI directly and manually set the task delete endpoints with HTTP methods like DELETE /tasks/{task_id}. You can also take advantage of SQLAlchemy's ORM functionalities to update tasks in your database.
+   ```  
+       
+5-6 **Completion**, 'Reminders',  and Prioritization - Again they could be done using FastAPI endpoints that accept HTTP methods like POST or PUT for completing/marking a task as completed (assuming you have the corresponding status), sending reminders via emails if necessary with SQLAlchemy ORM.
+   ```python  
+      from sqlalchemy import Boolean, Column, Integer, String  # Assumes that there are fields in your Task model for these attributes/features: ID - task_id (int) and Completed(Boolean). You can use FastAPI's request bodies to handle PUT requests with different body parameters.
+   ```  
+       
+7-8 **UI/UX Design**, 'Notifications', Error handling – They would be handled by frontend developers who are responsible for building a UI and ensuring the app is intuitive & user friendly using libraries like React or Angular (depending on your requirements). For error handling you could use FastAPI's exception handlers to catch exceptions in case of invalid data entry/database operations, then return an appropriate HTTP response with relevant information about what went wrong. 
+   ```python  
+      from fastapi import APIRouter # Assumes that we are using a router for our app if not then use FastAPI directly and manually set the exception handlers in your application to handle exceptions as specified above, returning errors or appropriate responses according their type with status codes (403 forbidden / 502 Bad Gateway).
+   ```  
+       
+9-16 **Documentation** - This would be a part of requirement gathering process and you should have documentation for each endpoint in API to explain its purpose, parameters it accepts/returns. It could also include examples that are easy on the user side (like sending POST requests with JSON data). 
+   ```python  
+      from fastapi import FastAPI # Assumes there is an instance of your app which has all APIs documented here for better understanding and collaboration among developers team or organization working in this project. This allows you to share knowledge, tools & projects together using a RESTful API (OpenAPI/Swagger). 
+   ```  
+       
+Please note that the above examples are simplified as per provided context information but they would provide an overview of how different features can be implemented under FastAPI and SQLAlchemy ORM. The real implementation could involve more complex details, such as handling user authentication for tasks in a multi-user environment or creating notifications with third party services depending upon requirements (like SendGrid/Mailgun).
+
+
+BE (code):
+Here's a simple example for user registration with FastAPI (based off provided description):
+```python
+from fastapi import Depends, HTTPException, status
+import models as m
+from sqlalchemy.orm import Session
+from database import get_session
+
+def create_user(db: Session = Depends(get_session), username=None , password=None ):
+    if not isinstance (username or password,(str)) : raise ValueError("Invalid parameters") #type check  
+    
+    user   = m.User()                                                  
+                                                                                     
+    try:         pwdHash             = hashlib.sha256(password.encode()).hexdigest ()          except Exception as e1: return('Password Hashing Failed...'+ str (e)) 
+                            #pasword hashing done using sha_crypt      ...            . ..   ......    /  || || |/|||  ) or ~   |    | -.-.----.'\` `/usr//etc etc-Harry-Dickinson....') and then store in your database     if password == pwdHash: 
+                                                                                      return('Login Unsuccessful...please check username & password', status_code=401)    else : user  = m.User(username = username ,password =  pwdHash )                  db.add (user   })                                                       catch block        # the following lines are for exception handling 
+        
+                                                                                      return('New User Created Successfully...')                                     except Exception as e:      raise ValueError ('Internal Server Error'+str(e))                from database import SessionLocal, engine    db = SessionLocal()   try :db.close ()     print ("Closing Connection")        else                 exit (1)
+``` 
+This is a very simple example and does not cover everything you asked for in your PM description but should give an idea of how to start with FastAPI backend development using SQLAlchemy ORM: it's important that we use the correct libraries, classes, methods etc. provided by Python (like hashlib) or any other specific software library/module used within our project and they are properly paired according their purpose in the application such as user authentication for registration, CRUD operations with SQLAlchemy ORM to interact data from database using APIs endpoints depending on users interaction which is handled at frontend.
+
+
+BE: Can you give more technical details about the backend responsibilities you listed?
+
+Sure! Here's a brief overview of how each feature would interact with the back-end developer.  I will provide general responses, as detailed implementation may vary based on specific requirements and database schema definitions in use for your project manager app. Note that this is assuming Python (using FastAPI) and SQLite or similar databases are used:
+
+1. **User Authentication** - The backend would handle user registration, login & password reset functionalities by creating User models with necessary fields such as username/email, hashed Password for security purposes in the database using Werkzeug's `security` module and then handling requests to create a new user (POST /users) or check if an existing email is already registered.
+   ```python
+   from fastapi import FastAPI, Depends  # assuming you have used dependancy injection above for app creation in your main file: App = FastAPI() etc...
+    
+   @app.post("/register/")
+   def register(user_registration : schemas.UserRegistration):    #assuming User registration data is passed via json body – check if needed based on the actual schema you are following for user authentication (password should be hashed, etc.)...      return {"message": "Successfully Registered"}
+    ```  
+2. **Task Creation** - This feature would create new tasks in your database by taking details such as title and description from a request body when an endpoint is hit to POST /tasks (as per the schema you are following). You'd also need validation on this, for example not allowing empty titles or descriptions which may be handled with Pydantic models.
+   ```python
+   @app.post("/task/")     #assuming Task data passed via json body...      return {"message": "Successfully Created"}  ... in schemas file..       class task(BaseModel):        title: str         description :str .... and validate it accordingly based on the schema you're following for tasks (e.g., length, format)
+    ```   
+3. **Task Updation** - This feature would update existing tasks by taking new details or changes from a request body when an endpoint is hit to PUT /tasks/{id} … it could look like this:  ``@app.put("/task/update-{int id}:..     return {"message": "Successfully Updated"}
+   ```python         class task(BaseModel):        title : str      description：str .... and validate fields as required by the schema for your tasks...  )`       or PUT method in FastAPI (which supports passing data through HTTP requests).  ``     app.put("/task/{id}", update_current_user)
+   ```         The id of task to be updated is passed via route parameter {int: 'id'}. This function would handle updating a specific user or any other fields based on the schema defined above in your FastAPI application (i.e., Pydantic models).  ``     return {"message": "Successfully Updated"}
+   ```  Note that these functions should be part of an authentication and authorization system, as they require checking if a requesting user is authorized to access or modify tasks within the database for security purposes.. so it's best practice would include methods like `is_admin()` (to check whether logged in person/user has admin rights), etc.
+4. **Task Deletion** - For this, we could use a DELETE request at /tasks/{id} endpoint to delete the specific task from our database and return message indicating success or failure of deletion operation..  for example:  ``@app.delete("/task/remove-{int 'id'}/") .....    def remove_user( id : int, current_user = Depends (get a user))
+    ```         if the requesting person is authorized to perform this action else return Unauthorized Error..  Then handle deletion in your FastAPI application by removing task from tasks table and returning success or failure message.  ``    app.delete("/task/remove-{int 'id'}", remove_user)
+    ```        Here, user authentication system is required to check if a requesting person has the necessary permissions (authorization), which might be handled in `is_admin()` function as mentioned above..  or by storing role information within each User model and checking that before proceeding with deletion.  ``    return {"message": "Successfully Deleted"}
+5. **User Management** - For user roles management, you'd have separate endpoints (like /users/get-all) to retrieve all users details from the database while handling authorization checks for permissions or similar role based functionality..  Check FastAPI documentation on how easy and fast it is in building these APIs using their `Depends` feature.
+
+
+BE: Can you give more technical details about the backend responsibilities you listed?
+
+Sure. The following are key points regarding back-end development for user registration, login functionality (as well as other general functionalities), task creation/update or deletion capabilities by Backend Developers in a Task Manager application context: 
+
+1. **User Registration** - This is an important feature because it allows users to create their account on the platform with necessary details such email and password, which will be used for user authentication during login operations. The backend should handle any validations associated like checking whether entered information (email or username) already exists in our system/database etc., using appropriate data structures(like HashMaps / Dictionaries).
+   
+2. **Login** - This is another critical task since users are logging into the application with their credentials, which helps to authenticate and maintain session for each user. The backend should handle all login-related tasks such as hashing passwords (securely), generating tokens on successful authentication etc., using libraries/frameworks that support these operations in a secure manner like JWT or OAuth depending upon the requirement of our application's scope(be it web, desktop).
+   
+3. **Task Creation / Update** - This is another key functionality for both Backend Developers and Frontends due to their need on various user interfaces such as Task Manager dashboard (which requires a UI/UX designer) or mobile app alike platform like iOS App etc., the backend should be responsible of receiving POST requests with details about new tasks, validating them before saving into database.
+   
+4. **Delete Tasks** - Lastly but certainly not least crucial to this task for both Backend and Frontends because it requires deleting or closing out a specific user-created Task from the system/database using appropriate methods (CRUD Operations in SQL Database, HTTP DELETE Method etc.).  The backend should handle all operations related with database interactions.
+
+
+BE:
+Can you provide technical details for my backend responsibilities?
+
+Sure! Here's a basic example of how your task manager app could be structured using FastAPI and SQLAlchemy. This will include User, Task & Priority models which would then interact with the database to create or retrieve data as per requirement by calling their respective methods in controllers like `user_controller` that handles user-related tasks such as registration, login etc.,
+and similarly for task related operations and also handling priority levels. 
+Please note: This is a simplified version of your requirements which can be expanded upon to include more complex functionalities if needed or different modules/services are implemented based on the project's requirement in larger scale applications (like integration with other services, notifications etc.). Also remember that this example assumes you already have an ORM mapping done between SQLAlchemy Models and a database.
+```python
+from sqlalchemy import Column, Integer, String, Boolean  # Import types for the fields we're dealing here...
+from fastapi_users import BaseUserMixin  
+# ...and FastAPI users authentication mixins (based on Pydantic models)   
+class User(BaseUserMixin):      
+     __tablename__ = "user"  # This is where your database table will be. You'll also need to set it here...     
+                          id: int= Column(Integer, primary_key=True, index=True )   ...    name : str            =  Column (String ,index =  True)         email:str =Column( String , unique=True  &lt;br />&nbsp;&nbsp;)password ;#...and other fields
+class TaskPriorityMixin():     # Mix in for the priority features. It's abstract because you will need to sub class it with a model that needs them (like above)   ...    def __init__(self, ):      super().__init__()       title: str=  Column(String ,index = True )
+class TaskBaseModel():          # The base task which the other tasks extend from...        id : int=Column(Integer, primary_key=True, index=True)     ...    def __init__(self):      super().__init()         title: str=  Column(String ,index = True )
+class TaskDescriptionMixin(): # Mix in for task description features. It's abstract because you will need to sub class it with a model that needs them...       desc :str=Column ( String)    ...   def __init__(self):      super().__init()         title: str=  Column(String ,index = True )
+class TaskModel(TaskBaseModel,  UserMixin.UserIDMixin &lt;br />&nbsp;&nbsp;/ 'user_id': int=Column('users.id')) :   ...    def __repr__(self)      return f'<task {self.title}>')
+class Priority(TaskPriorityMixin, BaseModel): # A model to handle priority levels...        task: TaskBase = Relationship("Tasks", back_populates="priorities")  id : int=  Column (Integer , primary_key =  True )   ...    def __init__(self)      super().__init()
+```         The above code is not complete as per your requirement. I am assuming a basic user model, task and priority models with their respective attributes for the fields you are going to use in FastAPI applications such as 'user_id' which references User Model ID etc., You need more information about other features if required then please let me know so that i may provide additional details or add them into this. 
+For example, I am assuming "UserMixin" is the module of fastapi-users where BaseModel and FastAPI user models are defined in a similar way to above code but you need more information about your project requirements for other functionalities such as notifications etc., based on that additional details then let me know.
+
+
+BE:
+Can you provide technical details for my backend responsibilities?
+
+Absolutely, I can help with that! The task assigned to me is the implementation and maintenance of a RESTful API using FastAPI. Here's an example how this could be accomplished in Python: 
+
+```python
+from fastapi import FastAPI
+# Import necessary dependencies if any - for instance SQLAlchemy or Alembic can handle database interactions, while Pydantic handles data validation and serialization/deserialization tasks. It's assumed here but not specified which ones to use in full detail due the complexity of this task (no code provided)
+# import models as necessary - for example from .models import Task  # assuming a SQLAlchemy model named 'Task'. FastAPI requires an instance of app, so I assume you have already set up your App. This is not specified here but will be needed in full detail soon due to complexity involved with database setup and CRUD operations
+# Import necessary routes - for example from .routes import task_router  # assuming a router named 'task'. FastAPI requires an instance of app, so I assume you have already set up your App. This is not specified here but will be needed in full detail soon due to complexity involved with authentication and permissions setup
+# Import necessary dependencies for testing - PyTest can handle unit tests or end-to-end (e2e) test cases which FastAPI does automatically, so I assume you have already set up your App. This is not specified here but will be needed in full detail soon due to complexity involved with database and API setup
+# Import necessary dependencies for CI/CD - tools like Docker or GitLab can help manage the deployment process easily – assuming FastAPI has been properly configured on these systems before this task, so I assume you have already set up your App. This is not specified here but will be needed in full detail soon due to complexity involved with continuous integration and delivery
+```  
+Please note that as stated above: "Assumptions are made because they simplify the example", which can certainly lead into confusion or a more complex task if these assumptions do no meet your situation. I encourage you take this time, work through each section in detail once it's done so we understand how everything is connected together better."
+
+
+BE:
+Can you provide technical details for my backend responsibilities?
+
+Sure! Here's a brief overview of some key points in your project team that would need to be taken care of by the backends and frontend developer roles, along with their corresponding code snippets related Python libraries or frameworks used. 
+
+1. **Registration & Authentication System**: You can use `FastAPI` for backend part as it is a modern, fast (high-performance), web framework based on standard Python type hints that encourages rapid development and clean, pragmatic design of the application with less code than when using frameworks like Django or Ruby on Rails.
+```python 
+from typing import Optional   # for optional parameters in function definitions   
+    
+import fastapi             # FastAPI Framework: https://fastapi.tiangolo.com/
+from pydantic_model_validator imort PydanticModelValidator, ValidationError      
+                                                                                    , ErrorResponseMessage                           
+app = FastAPI() 
+```  
+2 **Log In to Existing Account** : Use `FastAPI` for this one too as it is a modern and fast web framework built on standard Python type hints. It's also easy-to scale, powerful features like JWT authentication or OAuth are included out of the box in Fast API which you can use if your project needs that feature.
+```python 
+from typing import Optional   # for optional parameters   
+    
+import fastapi             as fas          from fastapi                    .dependencies      impor Depends, Request                 , BackgroundTasks           fr                     / tasks                   r                                                  ctack_timeout=60                                                                                             sts = HTTPStatus 215348.79 +-+ (
+```  
+Rest of the functionalities like add task etc can be implemented using FastAPI in python which is a modern, fast(high performance), web framework based on standard Python type hints that encourages rapid development and clean pragmatic design of application with less code than when you use frameworks such as Django or Flask.
+  
+3 **User Management**: As for user management functionality the FastAPI allows to create routes which can be used by other developers in your project, so if they are handling this part then it's not a back-end responsibility but rather how users interact with tasks (input form/editing mode).  Also role based permissions could handle through roles and their respective access control.
+```python   # Role Based Permissions via Pydantic Models or SQLAlchemy models in real application scenario would be handled here...    }      else:                          raise HTTPException(status_code=403, detail = 'Not enough permissions')  return current_user    `                   app.dependency()
+```  
+5 **Access Controls** : You can use FastAPI’s dependency for access control and role-based permission handling in this case too as it'll be a common requirement of any system that handles user credentials or authorization such roles might need to handle differently based on the context (Admin, Standard User). 
+```python   # Access Control via Pydantic Models would go here...    else:                                   raise HTTPException(status_code=403)                         return current tasks    `                   app.dependency()                           })         .post('/tasks/', response_model = TaskInDB, dependencies  = [Depends (get_current_user)] )
+```  
+6 **Testing**: For testing FastAPI applications there are many tools available like pytest or any other test framework of your choice. And you can run unit and integration tests as well for both backend-endpoints too if they're independent from each another otherwise it would be handled in a way that best suits the application architecture to separate database operations, user interaction etc into different modules/packages which could later become services depending upon requirements changes or even microservices.
+```python   # Testing Tools and FastAPI App for testing: https://fastapi.tiangolo.com/tutorial/testing/.  def test_create_task():...    pass    `                   app = fast API()               @app .get ("/users /")def get_all_user ()
+```  
+7 **Documentation** : Documentations can be handled using tools like Sphinx which will provide a more human-readable view of the code and it’s not only for developers but also users. You could use FastAPI's Open API to expose your endpoints, providing useful information about them (like request/response examples etc) in an interactive way while you build or modify APIs with Swagger UI that can be used by all other team members via Web browser and CLI tools for testing purposes too as they are a part of the documentation toolkit.
+```python   # Sphinx Documentation: https://www.sphinx-doc.org/en/master / autoapi    def get_application ()...  pass    `                   app = fast API()               @app .get ('/{itemid}')def read_user ( item id : str)
+```  
+8 **Maintenance**: This can be handled by FastAPI itself as it is a part of its main aim to reduce the need for complex and large code bases. It automatically manages HTTP methods which are being used, validates requests data etc in background tasks that help you run your server quickly when there’s demand during maintenance/upgrades or any other kind needs fast response times while application runs on real-time database operations can be performed via SQLAlchemy models to handle all of these aspects as part of FastAPI.
+```python   # Maintenance Work in case demands: https://fastapi.tiangolo.com / maintenance/ , bug fixes, etc...  def perform_maintenance () ...    pass    `                   app = fast API()               @app .get ('/{itemid}')def read_user ( item id : str)
+```  
+In the above list of responsibilities each team member needs to provide relevant Python code or snippets related with FastAPI, Pydantic models and other tools/libraries used in their part.  But remember these are only examples so you need replace them accordingly as per your project requirements based on architecture design like microservices which can be handled by different teams for backend-endpoints separately if required (depends).
+
+
+BE:
+Can you provide technical details for my backend responsibilities?
+
+Surely, I can help with that! Based on the provided markdown table detailing your functionality in terms of Backend Developers' role assignments (Front-End Dev and Back-End Dev), here are some implementation ideas. This is a simplified view based upon common web application principles but it should give you an idea about what kind of APIs or endpoints would need to be designed:
+```python
+from fastapi import FastAPI, Depends, HTTPException  # For handling requests & responses in the API layer (FastAPI)
+from sqlalchemy.orm import Session
+import models   # Import your SQLAlchemy ORM model classes here for database interactions e.g., UserModel from db_models module
+# Also include Pydantic Schemas and Validation if required based on project requirements & needs — not included due to complexity of implementation in this context, but necessary at a high level (to provide structure) - see below section about how they can be implemented as per the markdown table.
+```  
+**User Authentication: Implementation Example with FastAPI and SQLAlchemy ORM dependency injection principle for database operations/CRUD Operations in Django style if you are using traditional web frameworks (like Flask or Django).  **   `models -> UserModel, PasswordSchema etc. should be replaced by actual imports as per your application structure and models defined according to SQLAlchemy ORM model classes**
+```python
+def get_db():     # Defining a function for getting the database session instance in FastAPI app context — used like 'with' block, ensures that db transaction is always committed or rolled back after operations.   https://fastapi.tiangolo.com/tutorial/async-database/, etc
+    try:         async with SessionLocal() as db_session:     # Assuming we are using ASYNC SQLAlchemy ORM here, 'Session' is the equivalent of an existing database session in a traditional web context — or opening and closing connections to your actual DB.   https://www.sqlalchemy.org/orm/examples/enhanced_querying.html
+        yield db_session     # Return current Session instance that can be used for operations asynchronously with FastAPI dependency injection principle (e.g., in route handlers or services).  In SQLAlchem ORM, you would use a 'with' block to execute the following code within an active session and ensure transactions are managed correctly under these circumstances
+    finally:     # Ensuring your database close operation is run no matter what happened inside try/except blocks (database cleanup)   https://www.sqlalchemy.org/orm/examples/enhanced_querying.html – useful for closing connections, transactions etc when operations are finished
+        db_session.close()    # Close the session at end of operation to free up resources asynchronously in 'with' block after async call finishes execution (like database close)   https://www.sqlalchemy.org/orm/examples/enhanced_querying.html – useful for closing connections, transactions etc when operations are finished
+```    **Example FastAPI code:** `@app.post("/token", response_model=Token)` - This is the POST endpoint in which you can create your user login (FastAPI route). It will take an UserCredentials object and return a Token based on it’s input — as per usual authentication process of users logging into our system, e.g., hashing password + generating token for authenticated sessions
+```python    # Fast API code: Route to handle user registration using Pydantic schema model - used by '@app.post'/register method in above example (FastAPI route). It will take a UserRegisterSchema object and return the newly created id of registered users — as usual sign up process for our system
+```    **Example Fast API code:** ` @app.put("/task/{id}", response_model=Task)` - This is one end-point in your application that will allow updating a task, with '{id}' being the unique id of particular Task instance e.g., to update description or deadline for specific tasks
+```python    # Fast API code: Route handler/end point (FastAPI route). It takes an ID and updates it's data — again as usual process when updating a task in our system - this will be done by the Back-End Dev role. The updated Task object is returned back to Front End for response e,g.,
+```    **Example Fast API code:** `@app.delete("/task/{id}", status_code=204)` – This endpoint deletes a task with '{id}' as the unique identifier - again process when deleting tasks in our system like so by Backend Dev role and return no content HTTP Status Code (status code of response).
+```python    # Fast API Route handler/End Point to delete specific Task. It takes an ID from request parameter, deletes it’s data — as usual task Deletion process for users e.,g,, which will be done by both Frontend and Back-end Dev roles in our system - with the unique id provided
+```   This list serves a basic functionality of user authentication (login & registration), tasks creation/updating, deletions. You can add more endpoints to cover other operations as per your project needs like sorting users by name or age etc based on requirements if required. Please adjust and adapt them according the actual implementation in Python FastAPI using SQLAlchemy ORM for database interactions (CRUD Operations).
+
+
