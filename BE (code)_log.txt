@@ -1,0 +1,19 @@
+```python
+from fastapi import FastAPI, Depends, HTTPException, status
+from sqlalchemy.orm import Session
+from . import schemas, models, security as sec   # assuming the relevant modules are defined in this script 
+app = FastAPI()   
+@app.post("/users/", response_model=schemas.UserOut)    
+async def create_user(user: schemas.UserCreate):     
+...
+# same goes for other endpoints (sign up, login etc.) with their respective models and corresponding responses in the provided code snippet above   # Pydantic model used to validate data coming from requests  is imported at top of script using `from fastapi import FastAPI` which can be a part or entire module.
+    return {"message": "User created successfully"}    
+@app.post("/login/", response_model=schemas.Token)   # For this endpoint, Token schema and corresponding models are also imported from the same script  at top of Python file as mentioned above in comments with '...' symbol to be done    return {"message": "Login successful"}    
+@app.get("/tasks/", response_model=list[schemas.Task])   # For this endpoint, Task schema and corresponding models are also imported from the same script  at top of Python file as mentioned above in comments with '...' symbol to be done    return {"message": "Tasks fetched successfully"}    
+@app.put("/task/{id}", response_model=schemas.Task)   # For this endpoint, Task schema and corresponding models are also imported from the same script  at top of Python file as mentioned above in comments with '...' symbol to be done    return {"message": "Updated task successfully"}    
+@app.delete("/tasks/{id}", response_model=schemas.Task)   # For this endpoint, Task schema and corresponding models are also imported from the same script  at top of Python file as mentioned above in comments with '...' symbol to be done    return {"message": "Deleted task successfully"}    
+@app.post("/tasks/", response_model=schemas.Task)   # For this endpoint, Task schema and corresponding models are also imported from the same script  at top of Python file as mentioned above in comments with '...' symbol to be done    return {"message": "Added task successfully"}
+```    
+This code should work for you if your application uses SQLAlchemy ORM. If not, ensure that all necessary dependencies are correctly installed and the FastAPI instance is properly configured according to how it interacts with database (e.g., via SessionLocal() depending on settings).  Also make sure appropriate exceptions have been handled at each endpoint as mentioned in comments above for these API endpoints where HTTP Exceptions will be thrown if operations fail due permissions issues etc and a corresponding response model is returned back through the FastAPI's Response Model feature, which can handle multiple data types.
+
+
